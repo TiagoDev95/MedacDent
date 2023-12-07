@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,600;0,900;1,300;1,900&display=swap');
+
+*, html{
+    font-family: 'Exo 2', sans-serif;
+    font-size: large;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.fondoOscuro{
+    opacity: .3;
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #21b2db;
+}
+
+/*Menú principal (botones)*/
+#mainlogo{
+    width: 14rem;
+    height: 4rem;
+}
+
+.main{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.mainButton{
+    width: 15rem;
+    height: 6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #21b2bd;
+    background-color: #21b3bd3f;
+    transition: transform .1s, border-bottom .1s, border-right .1s, background-color .1s, color 0.1s;
+}
+
+.mainButton:hover{
+    color:white;
+    transform: translateY(-5px);
+    border-bottom: 5px solid rgba(42, 241, 255, 0.233);
+    border-right: 5px solid rgba(42, 241, 255, 0.233);
+    background-color: #21b2bd;
+}
+
+.mainButton:active{
+    transform: translate(2px, 0px);
+    background-color: #21b3bdaf;
+}
+/*Fin del menú principal*/
+
+/*Menú crear cita*/
+.formPage{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset{
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid #21b2bd;
+    border-radius: 10px;
+    background-color: #D6F0F4;
+}
+
+legend{
+    color: #21b2bd;
+    background-color: white;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+#personalData{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form{
+    width: 56rem;
+}
+
+.datos{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputSize{
+    height: 2.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+span{
+    font-style: italic;
+    color: rgb(255, 0, 128);
+    font-size: smaller;
+}
+
+label{
+    border: 1px solid #21b2bd;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 1.5rem;
+    width: 10rem;
+    margin-right: 0;
+    background-color: #21b2bd;
+}
+
+label[for="cita"]{
+    margin-right: .5rem;
+}
+
+input{
+    width: 15rem;
+    /*height: 1.5rem;*/
+    margin-left: 0;
+    margin-right: 2rem;
+    padding-left: .5rem;
+    outline: none;   
+    border: 1px solid #21b2bd;
+}
+
+input[type="email"]{
+    width: 17rem;
+}
+
+
+.short{
+    width: 5rem;
+}
+
+.inline{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+}
+
+.fail{
+    /*background-color: rgba(255, 0, 0, 0.527);*/
+    background-image: url(../images/incorrecto.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    border: 1px solid rgba(255, 0, 0, 0.527);
+    background-size: 7%;
+}
+
+.failDate{
+    background-image: url(../images/incorrecto.svg);
+    background-repeat: no-repeat;
+    border: 1px solid rgba(255, 0, 0, 0.527);
+    background-position: 90%;
+    background-size: 7%;
+    
+}
+
+.correcto{
+    /*background-color: rgba(0, 255, 34, 0.363);*/
+    background-image: url(../images/correcto.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 7%;
+}
+
+.rightDate{
+    background-image: url(../images/correcto.svg);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: 7%;
+}
+
+label[for="cita"], label[for="birth"], label[for="observations"]{
+    background-color: transparent;
+    border: none;
+}
+
+textarea{
+    width: 25rem;
+    height: 5rem;
+    outline: none;
+    border: 1px solid #21b2bd;
+    border-radius: 5px;
+}
+
+
+.formBTTS{
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: #21b2bd;
+    cursor: pointer;
+    transition: transform .15s;
+}
+
+.formBTTS:hover{
+    opacity: 0.7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#ventanaFlotante{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid #21b3bdaf;
+    top: 40%;
+    left: 50%;
+    width: 30rem;
+    height: 15rem;
+    transform: translate(-50%, -50%);
+}
+
+
+#dialogTitle{
+    font-size: x-large;
+}
+
+#dialogBtn{
+    background-color: #21b2bd;
+    color: white;
+    cursor: pointer;
+    width: 7rem;
+    height: 3.5rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 5px solid #17757C;
+    border-right: 5px solid #17757C;
+    transition: transform .3s, opacity .3s;
+
+}
+
+#dialogBtn:hover{
+    opacity: .7;
+    transform: scale(1.3);
+}
+
+#cancelBtn{
+    cursor: pointer;
+    outline: none;
+    width: 6rem;
+    height: 2rem;
+}
+/*Fin del menú crear cita*/
+
+
+/*Menú de tabla que contiene el listado de citas*/
+
+.tablaCitas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#tabla{
+    margin: 2rem;
+    padding: 2rem;
+    border-collapse: collapse;
+    border: 1px solid rgba(4, 162, 190, 0.164);
+}
+
+
+tbody{
+    display: block;
+    max-height: 30rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+tbody::-webkit-scrollbar{
+    background-color: white;
+    width: 8px;
+}
+
+tbody::-webkit-scrollbar-thumb{
+    background-color: #21b3bd85;
+    border-radius: 8px;
+}
+
+table > caption{
+    background-color: #21b2bd;
+    font-size: larger;
+    padding: .5rem;
+}
+
+tr{
+    border: 1px solid #21b2bd;
+    cursor: pointer;
+}
+
+.filaNotSelected:hover{
+    background-color: #21b3bd33;
+}
+
+.filaSelected{
+    background-color: #21b3bd33;
+}
+
+td{
+    padding: 1rem 1rem;
+}
+
+#tablaBtsDiv{
+    height: 3rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.tablaBts{
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: #21b2bd;
+    border: none;
+    cursor: pointer;
+    transition: transform .15s;
+}
+
+.tablaBts:hover{
+    opacity: 0.7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.tablaBts:disabled{
+    cursor:default;
+    background-color: rgb(167, 167, 167);
+    transform: none;
+}
+
+/*Fin del apartado de la tabla de citas*/
+
+
+/*Pie de página*/
+footer{
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    margin: 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(4, 162, 190, 0.164);
+    color: black;
+}
+
+#footerLogo{
+    width: 11rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contactData{
+    width: 32rem;
+    transform: translateX(-3.5rem);
+}
+
+#email:visited{
+    color: black;
+}
+
+#socialMedia{
+    height: 100%;
+    width: 5rem;
+    margin-right: 1rem;
+}
+
+/*.enlace{}*/
+
+#instagram, #facebook{
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.1s;
+}
+
+#instagram:hover, #facebook:hover{
+    transform: translateY(-2px);
+}
+
+#instagram:active, #facebook:active{
+    transform: translateY(0px);
+}

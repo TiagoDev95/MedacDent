@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedacDent</title>
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+</head>
+<body id="documento">
+    <header>
+        <img src="../images/medacdent2.png" alt="MedacDentLogo" id="mainlogo">
+    </header>
+    
+    <section id="main" class="main">
+        <button id="cita" class="mainButton" onclick="crearCita(true)">Nueva cita</button>
+        <button id="lista" class="mainButton" onclick="tablaCitas()">Listado de citas</button>
+    </section>
+
+    <footer>
+        <img src="../images/medacdent2.png" alt="MedacDentLogo" id="footerLogo">
+        <div id="contactData" class="info">
+            <p>Concacto:</p>
+            <p>922189523</p>
+            <p><a href="https://www.gmail.com" id="email" target="_blank">info@medacdent.com</a></p>
+            <p>Santa Cruz de Tenerife</p>
+        </div>
+        <div id="socialMedia" class="info">
+            <a href="https://www.instagram.com/" class="enlace" target="_blank"><img src="../images/instagram.svg" alt="instagram" id="instagram"></a>
+            <a href="https://www.facebook.com" class="enlace" target="_blank"><img src="../images/facebook.svg" alt="facebook" id="facebook"></a>
+        </div>
+    </footer>
+
+    <script src="../scripts/manejoDom.js" type="text/javascript"></script>
+    <script src="../scripts/claseCita.js" type="text/javascript"></script>
+    <script src="../scripts/validaciones.js" type="text/javascript"></script>
+    <script src="../scripts/manejoCookies.js" type="text/javascript"></script>
+
+</body>
+</html>
